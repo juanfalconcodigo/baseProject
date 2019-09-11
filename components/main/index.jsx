@@ -3,9 +3,9 @@ import './main.scss';
 
 function Main(props) {
   console.log('main props', props)
-  return <main>
+  return (<main>
     {props.children}
-  </main>;
+  </main>);
 }
 
 export { Main };

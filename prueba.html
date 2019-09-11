@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <button>click!!</button>
+    <script>
+        'use strict'
+      let obj = {
+        name: "sebastian",
+        lastname: "yabiku",
+        getName: function() {
+          return `hola mi nombre es ${this.name} y mi apellido
+        es ${this.lastname}`;
+        }
+      };
+
+      console.log(obj.getName())
+
+      
+      let obj2 = {
+        name: "Luis",
+        lastname: "Toledo",
+      }
+
+
+      const a = obj.getName.bind(obj2)
+
+    //   console.log(a())
+
+
+    //   function d() {
+    //     console.log(this)
+    //   }
+
+    //   d();
+
+
+    function Example() {
+        this.name = 'sebastian';
+        this.lastname = 'yabiku';
+        this.btn = document.querySelector('button')
+
+
+        this.btn.addEventListener('click', function() {
+            console.log('click', this)
+        }.bind(this))
+    }
+
+
+
+    let example = new Example();
+
+
+    
+
+
+      
+    </script>
+  </body>
+</html>
